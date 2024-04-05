@@ -1,0 +1,11 @@
+/* center the calc */
+html{/*1. use devtool to see what the is the container that is restricting its elements & max its dimensions*/
+    height: 100vh; 
+}
+body{/*2.to align, make sure alignment is made then max height*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
