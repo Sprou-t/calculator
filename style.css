@@ -84,8 +84,13 @@ body{/*2.to align, make sure alignment is made then max height*/
     font-weight: 700;
 }
 
+/*additional styling for buttons*/
 .row .divide, .row .multiply, .row .subtract, .row .add{
     background-color: orange;
+}
+
+.row .subtract{
+    font-size:35px;
 }
 
 .row .equal{
