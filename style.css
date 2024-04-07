@@ -54,14 +54,40 @@ body{/*2.to align, make sure alignment is made then max height*/
 
 .row{/*flex items r each rows*/
     display: flex;
-    justify-content: space-around;
-    flex: 1; /*rmb that flex applies to the it*/ 
+    flex:1;/*rmb that flex applies to the it*/ 
     gap:15px /*gap only applies ot its items thus within a row*/
 }
 
 .row button{
-    flex:1;/*button r flex items of .row thus we can also apply flex directly*/
+    flex: 1;/*button r flex items of .row thus we can also apply flex directly*/
     margin-bottom: 15px;
     border-radius: 15px;
+    color:white;
+    background-color: rgba(128, 128, 128, 0.685);
+    font-size: 20px;
+    font-weight: 700;
 }
 
+.clear-row{
+    display: flex;
+    flex: 1;
+    max-height:40px;
+    max-width: 101px;
+    margin-bottom:5px;
+}
+.clear-row .clear{
+    flex: 1;
+    border-radius: 15px;
+    background-color: red;
+    color: antiquewhite;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.row .divide, .row .multiply, .row .subtract, .row .add{
+    background-color: orange;
+}
+
+.row .equal{
+    background-color: blue;
+}
