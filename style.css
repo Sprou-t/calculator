@@ -68,19 +68,19 @@ body{/*2.to align, make sure alignment is made then max height*/
     font-weight: 700;
 }
 
-.clear-row{
+#clear-row{
     display: flex;
     flex: 1;
     max-height:40px;
     max-width: 101px;
     margin-bottom:5px;
 }
-.clear-row .clear{
+#clear-row .clear{
     flex: 1;
     border-radius: 15px;
     background-color: red;
     color: antiquewhite;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 700;
 }
 
