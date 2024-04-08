@@ -4,17 +4,37 @@ let secondNum = '';
 
 function display(){
     //create an event function that stores the 3 variables using event delegation
-    let buttonSelect = document.querySelectorAll('.row');
+    let selectButtons = document.querySelectorAll('.row');
     let display = document.querySelector('.display'); //create a var to hold display val
-    let value; //create a variable to hold the number from the button pressed
 
-    buttonSelect.forEach(row => {
+    selectButtons.forEach(row => {
         row.addEventListener('click',(event) => {
             let target = event.target;
 
-            if (target.classList.contains('number')){
-                value = target.textContent; //retrieves the html content of the button
-                display.value += value; //.value-->accessing the value property of input element. Each input has a value that is set by default or by user but usually it is left blank
+            if (target.classList.contains('number') || target.classList.contains('decimal')){
+                //differentiate btw 1st & 2nd num to store them respectively
+                if (operator===''){
+                    firstNum = target.textContent;
+                    display.value += firstNum;
+//.value-->accessing the value property of input element. Each input has a value that is set by default or by user but usually it is left blank
+                }
+
+                else{
+                    secondNum = target.textContent;
+                    display.value += secondNum; 
+                }
+                
+            }
+
+            else if (target.classList.contains('operator')){
+                operator = target.textContent;
+                display.value += operator;
+            }
+
+            else if (target.classList.contains('equal') && (firstNum !=='' && operator !=='' && secondNum !=='')){
+                //display results after clearing it
+                display.value = '';
+                display.value = operate(Number(firstNum),operator,Number(secondNum));
             }
         })
     });
@@ -22,20 +42,20 @@ function display(){
 
 //create a function that calls upon whichever operator function
 function operate(firstNum,operator,secondNum){
-    if (operator = '+'){
-        add(firstNum, secondNum);
+    if (operator === '+'){
+        return add(firstNum, secondNum);
     }
 
-    else if (operator = '-'){
-        subtract(firstNum, secondNum);
+    else if (operator === '-'){
+        return subtract(firstNum, secondNum);
     }
 
-    else if (operator = 'x'){
-        multiply(firstNum, secondNum);
+    else if (operator === 'X'){
+        return multiply(firstNum, secondNum);
     }
 
-    else {
-        divide(firstNum, secondNum);
+    else if (operator === '/') {
+        return divide(firstNum, secondNum);
     }
 
 }
