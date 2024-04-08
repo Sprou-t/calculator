@@ -35,6 +35,14 @@ function display(){
                 //display results after clearing it
                 display.value = '';
                 display.value = operate(Number(firstNum),operator,Number(secondNum));
+                
+            }
+
+            else if (target.classList.contains('clear')){
+                display.value = '';
+                firstNum = '';
+                operator = '';
+                secondNum = '';
             }
         })
     });

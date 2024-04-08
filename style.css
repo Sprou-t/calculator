@@ -41,8 +41,8 @@ body{/*2.to align, make sure alignment is made then max height*/
     /*by setting it to flex, its direct element ie. text becomes like its 
     flex-items and can be centered*/
     display: flex;
-    align-items:center;
-    justify-content: center;
+    text-align: end;
+    font-size: 80px;
 }
 .body{
     width: 450px;
@@ -96,3 +96,4 @@ body{/*2.to align, make sure alignment is made then max height*/
 .row .equal{
     background-color: blue;
 }
+
