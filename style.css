@@ -42,7 +42,7 @@ body{/*2.to align, make sure alignment is made then max height*/
     flex-items and can be centered*/
     display: flex;
     text-align: end;
-    font-size: 80px;
+    font-size: 78px;
 }
 .body{
     width: 450px;
